@@ -1,0 +1,11 @@
+platform :ios, '11.0'
+
+use_frameworks!
+
+target 'Mochila_Example' do
+  pod 'Mochila', :path => '../'
+
+  target 'Mochila_Tests' do
+    inherit! :search_paths
+  end
+end

@@ -1,0 +1,6 @@
+framework module Mochila {
+  umbrella header "Mochila-umbrella.h"
+
+  export *
+  module * { export * }
+}
