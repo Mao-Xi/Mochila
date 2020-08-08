@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		027650E933B2D91E7CB5CF069A91572B /* Mochila-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 995E5D60D7FEBA9FABAF511B02FD5892 /* Mochila-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08E9545424DE645B00760081 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9545324DE645B00760081 /* Layout.swift */; };
+		08E9545624DE671B00760081 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9545524DE671B00760081 /* Schedule.swift */; };
+		08E9545824DE7CE900760081 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9545724DE7CE900760081 /* NibView.swift */; };
+		08E9545A24DE9CAE00760081 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9545924DE9CAE00760081 /* Color.swift */; };
+		08E9545C24DE9D2A00760081 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9545B24DE9D2A00760081 /* Image.swift */; };
+		08E9545E24DE9FBB00760081 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9545D24DE9FBB00760081 /* View.swift */; };
+		08E9546024DEB7FA00760081 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9545F24DEB7FA00760081 /* Regex.swift */; };
+		08E9546224DEB8AF00760081 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9546124DEB8AF00760081 /* Controller.swift */; };
+		08E9546424DEBA1C00760081 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9546324DEBA1C00760081 /* Foundation.swift */; };
 		4644E01E13EDC4B6DAAB7892400211EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		5D1E3FAC2A5833D3C8A444B36FEBBB55 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555D311E3DC05BFBE1D119B6B867E3C /* Core.swift */; };
 		7DF35C281E5179F13F4C365C358E0DA3 /* Pods-Mochila_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BFBF3ACC93601FA786854B8D06D53A69 /* Pods-Mochila_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,6 +47,15 @@
 
 /* Begin PBXFileReference section */
 		00188771D8392D67B3E053E0688EEC3C /* Pods-Mochila_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mochila_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		08E9545324DE645B00760081 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		08E9545524DE671B00760081 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		08E9545724DE7CE900760081 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		08E9545924DE9CAE00760081 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		08E9545B24DE9D2A00760081 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		08E9545D24DE9FBB00760081 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		08E9545F24DEB7FA00760081 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		08E9546124DEB8AF00760081 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		08E9546324DEBA1C00760081 /* Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foundation.swift; sourceTree = "<group>"; };
 		1555D311E3DC05BFBE1D119B6B867E3C /* Core.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Core.swift; path = Mochila/Core/Core.swift; sourceTree = "<group>"; };
 		17037D27ADA94B3E591876F3E78361E2 /* Mochila-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mochila-prefix.pch"; sourceTree = "<group>"; };
 		2489EC8557095D2D4F53AF4B145AE8AF /* Pods-Mochila_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mochila_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -100,9 +118,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08E9545224DE642B00760081 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				08E9545324DE645B00760081 /* Layout.swift */,
+				08E9545724DE7CE900760081 /* NibView.swift */,
+				08E9545D24DE9FBB00760081 /* View.swift */,
+				08E9546124DEB8AF00760081 /* Controller.swift */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
 		3C2E94C3B3E2344652989FAEAFB46722 /* Mochila */ = {
 			isa = PBXGroup;
 			children = (
+				08E9545224DE642B00760081 /* Layout */,
 				5A6954DDE46FE8431E9DBD0A32AB66D3 /* Core */,
 				CD4F31E5F26B4131B74D295B185444DE /* Pod */,
 				9136A386202CBB177E38FAC1EDC7939A /* Support Files */,
@@ -115,6 +145,11 @@
 			isa = PBXGroup;
 			children = (
 				1555D311E3DC05BFBE1D119B6B867E3C /* Core.swift */,
+				08E9545524DE671B00760081 /* Schedule.swift */,
+				08E9545924DE9CAE00760081 /* Color.swift */,
+				08E9545B24DE9D2A00760081 /* Image.swift */,
+				08E9545F24DEB7FA00760081 /* Regex.swift */,
+				08E9546324DEBA1C00760081 /* Foundation.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -391,8 +426,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08E9545E24DE9FBB00760081 /* View.swift in Sources */,
+				08E9545C24DE9D2A00760081 /* Image.swift in Sources */,
 				5D1E3FAC2A5833D3C8A444B36FEBBB55 /* Core.swift in Sources */,
 				D372B00E8C4F02A77BEFBEBC7FF32912 /* Mochila-dummy.m in Sources */,
+				08E9545624DE671B00760081 /* Schedule.swift in Sources */,
+				08E9546224DEB8AF00760081 /* Controller.swift in Sources */,
+				08E9546024DEB7FA00760081 /* Regex.swift in Sources */,
+				08E9546424DEBA1C00760081 /* Foundation.swift in Sources */,
+				08E9545424DE645B00760081 /* Layout.swift in Sources */,
+				08E9545824DE7CE900760081 /* NibView.swift in Sources */,
+				08E9545A24DE9CAE00760081 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
