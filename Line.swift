@@ -8,6 +8,7 @@
 import Foundation
 
 private var topLineKey: Void?
+private var bottomLineKey: Void?
 
 extension UIView {
 
@@ -40,6 +41,32 @@ extension UIView {
             view.heightAnchor.constraint(equalToConstant: CONSTANT.lineWidth).isActive = true
 
             objc_setAssociatedObject(self, &topLineKey, view, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+
+    @IBInspectable var bottomLineEnabled: Bool {
+        get {
+            if let _ = objc_getAssociatedObject(self, &bottomLineKey) as? UIView {
+                return true
+            }
+            return false
+        }
+        set(value) {
+            if let view = objc_getAssociatedObject(self, &bottomLineKey) as? UIView {
+                view.removeFromSuperview()
+            }
+            if !value { return }
+
+            let view = UIView.autoLayoutView()
+            view.backgroundColor = borderColor
+            addSubview(view)
+
+            view.topAnchor.constraint(equalTo: topAnchor).isActive = true
+            view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+            view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+            view.heightAnchor.constraint(equalToConstant: CONSTANT.lineWidth).isActive = true
+
+            objc_setAssociatedObject(self, &bottomLineKey, view, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 }
