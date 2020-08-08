@@ -8,7 +8,7 @@
 import Foundation
 
 extension String {
-    func trimWord(wordLimit: Int) -> String {
+    public func trimWord(wordLimit: Int) -> String {
         let scanner = Scanner(string: self)
         var result: [String] = []
         if #available(iOS 13.0, *) {
@@ -28,5 +28,43 @@ extension String {
             }
         }
         return result.joined(separator: " ")
+    }
+}
+
+extension Dictionary where Key == String, Value == String {
+    var query: String? {
+        var urlComponent = URLComponents(string: "")
+        var queryItems: [URLQueryItem] = []
+        for (key, value) in self {
+            queryItems.append(URLQueryItem(name: key, value: value))
+        }
+        urlComponent?.queryItems = queryItems
+        return urlComponent?.query
+    }
+}
+
+extension URL {
+    public var queryParameters: [String: String]? {
+        guard let components = URLComponents(url: self, resolvingAgainstBaseURL: true), let queryItems = components.queryItems else { return nil }
+        return queryItems.reduce(into: [String: String]()) { (result, item) in
+            result[item.name] = item.value
+        }
+    }
+}
+
+extension HTTPCookieStorage {
+    public static func cookies(_ domain: String? = nil) -> [HTTPCookie]? {
+        let cookies = HTTPCookieStorage.shared.cookies
+        guard let domain = domain else { return cookies }
+
+        let filteredCookies = cookies?.filter { ($0.domain as NSString).range(of: domain).location != NSNotFound }
+        return filteredCookies
+    }
+
+    public static func deleteCookies(_ domain: String? = nil) {
+        guard let cookies = self.cookies(domain) else { return }
+        for cookie in cookies {
+            HTTPCookieStorage.shared.deleteCookie(cookie)
+        }
     }
 }
