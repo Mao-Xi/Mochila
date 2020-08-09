@@ -11,13 +11,13 @@ private var topLineKey: Void?
 private var bottomLineKey: Void?
 
 extension UIView {
-
-    static func autoLayoutView() -> UIView {
+    
+    public static func autoLayoutView() -> UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }
-
+    
     @IBInspectable var topLineEnabled: Bool {
         get {
             if let _ = objc_getAssociatedObject(self, &topLineKey) as? UIView {
@@ -30,20 +30,20 @@ extension UIView {
                 view.removeFromSuperview()
             }
             if !value { return }
-
+            
             let view = UIView.autoLayoutView()
             view.backgroundColor = borderColor
             addSubview(view)
-
+            
             view.topAnchor.constraint(equalTo: topAnchor).isActive = true
             view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
             view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
             view.heightAnchor.constraint(equalToConstant: CONSTANT.lineWidth).isActive = true
-
+            
             objc_setAssociatedObject(self, &topLineKey, view, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-
+    
     @IBInspectable var bottomLineEnabled: Bool {
         get {
             if let _ = objc_getAssociatedObject(self, &bottomLineKey) as? UIView {
@@ -56,16 +56,16 @@ extension UIView {
                 view.removeFromSuperview()
             }
             if !value { return }
-
+            
             let view = UIView.autoLayoutView()
             view.backgroundColor = borderColor
             addSubview(view)
-
+            
             view.topAnchor.constraint(equalTo: topAnchor).isActive = true
             view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
             view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
             view.heightAnchor.constraint(equalToConstant: CONSTANT.lineWidth).isActive = true
-
+            
             objc_setAssociatedObject(self, &bottomLineKey, view, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }

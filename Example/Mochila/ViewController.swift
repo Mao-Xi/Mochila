@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Mochila
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("\(CONSTANT.screenWidth)")
         // Do any additional setup after loading the view, typically from a nib.
     }
 

@@ -16,14 +16,14 @@ extension UIViewController {
         }
     }
     
-    func displayContentController(controller: UIViewController, embedIn view: UIView) {
+    public func displayContentController(controller: UIViewController, embedIn view: UIView) {
         addChild(controller)
         controller.view.frame = view.bounds
         view.addSubview(controller.view)
         controller.didMove(toParent: self)
     }
     
-    func hideContentController(controller: UIViewController) {
+    public func hideContentController(controller: UIViewController) {
         controller.willMove(toParent: nil)
         controller.view.removeFromSuperview()
         controller.removeFromParent()
