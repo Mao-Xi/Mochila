@@ -21,14 +21,14 @@ public struct CONSTANT {
     public static let enUSLocale = Locale(identifier: "en_US")
     public static var numberFormatter: NumberFormatter {
         let numberFormatter = NumberFormatter()
-        numberFormatter.locale = CONSTANT.enUSLocale
+        numberFormatter.locale = enUSLocale
         numberFormatter.numberStyle = .currency
         numberFormatter.usesGroupingSeparator = true
         return numberFormatter
     }
     public static var dateFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = CONSTANT.enUSLocale
+        dateFormatter.locale = enUSLocale
         dateFormatter.calendar = gregorianCalendar
         return dateFormatter
     }

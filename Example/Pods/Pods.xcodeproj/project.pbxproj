@@ -12,6 +12,7 @@
 		080A2F5F24DED36900257F03 /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080A2F5E24DED36900257F03 /* Web.swift */; };
 		080A2F6124DEE00700257F03 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080A2F6024DEE00700257F03 /* Line.swift */; };
 		0819D72E24DFCD3E00C06BE8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819D72D24DFCD3E00C06BE8 /* Date.swift */; };
+		08C8C1BD24F6A8D0004B7B99 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C8C1BC24F6A8D0004B7B99 /* Codable.swift */; };
 		08E9545424DE645B00760081 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9545324DE645B00760081 /* Layout.swift */; };
 		08E9545624DE671B00760081 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9545524DE671B00760081 /* Schedule.swift */; };
 		08E9545824DE7CE900760081 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9545724DE7CE900760081 /* NibView.swift */; };
@@ -55,6 +56,7 @@
 		080A2F5E24DED36900257F03 /* Web.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web.swift; sourceTree = "<group>"; };
 		080A2F6024DEE00700257F03 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		0819D72D24DFCD3E00C06BE8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		08C8C1BC24F6A8D0004B7B99 /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
 		08E9545324DE645B00760081 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		08E9545524DE671B00760081 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		08E9545724DE7CE900760081 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				08E9545F24DEB7FA00760081 /* Regex.swift */,
 				08E9546324DEBA1C00760081 /* Foundation.swift */,
 				0819D72D24DFCD3E00C06BE8 /* Date.swift */,
+				08C8C1BC24F6A8D0004B7B99 /* Codable.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 			files = (
 				08E9545E24DE9FBB00760081 /* View.swift in Sources */,
 				0819D72E24DFCD3E00C06BE8 /* Date.swift in Sources */,
+				08C8C1BD24F6A8D0004B7B99 /* Codable.swift in Sources */,
 				08E9545C24DE9D2A00760081 /* Image.swift in Sources */,
 				080A2F5F24DED36900257F03 /* Web.swift in Sources */,
 				5D1E3FAC2A5833D3C8A444B36FEBBB55 /* Core.swift in Sources */,

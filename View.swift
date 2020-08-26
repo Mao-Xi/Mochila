@@ -8,8 +8,21 @@
 import Foundation
 
 extension UIButton {
+
+    convenience init(logo: UIImage, text: String, font: UIFont, textColor: UIColor, action: Selector) {
+        self.init()
+        let imageAttachment = NSTextAttachment()
+        imageAttachment.image = logo
+        imageAttachment.bounds = CGRect(x: 0, y: 0, width: 10, height: 11)
+        let attributedTitle = NSMutableAttributedString(attachment: imageAttachment)
+        let attributedText = NSAttributedString(string: " \(text)", attributes: [.font: font, .foregroundColor: textColor])
+        attributedTitle.append(attributedText)
+        setAttributedTitle(attributedTitle, for: .normal)
+        addTarget(self, action: action, for: .touchUpInside)
+    }
+
     public func setBackgroundColor(color: UIColor, forState: UIControl.State) {
-        self.clipsToBounds = true
+        clipsToBounds = true
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         if let context = UIGraphicsGetCurrentContext() {
             context.setFillColor(color.cgColor)
