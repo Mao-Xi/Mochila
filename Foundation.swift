@@ -41,6 +41,85 @@ extension String {
     }
 }
 
+private extension String {
+    func index(at offset: Int) -> String.Index {
+        index(startIndex, offsetBy: offset)
+    }
+}
+
+public extension String {
+    
+    /*
+     let subText = "Hello World!"[1]
+     print(subText)
+     e
+     */
+    subscript(value: Int) -> Character {
+        self[index(at: value)]
+    }
+}
+
+public extension String {
+    
+    /*
+     let range = NSRange(location: 0, length: 5)
+     let subText = "Hello World!"[range]
+     print(subText)
+     Hello
+     */
+    subscript(value: NSRange) -> Substring {
+        self[value.lowerBound..<value.upperBound]
+    }
+}
+
+public extension String {
+    
+    /*
+     let subText = "Hello World!"[0...5]
+     print(subText)
+     Hello
+     */
+    subscript(value: CountableClosedRange<Int>) -> Substring {
+        self[index(at: value.lowerBound)...index(at: value.upperBound)]
+    }
+    
+    /*
+     let subText = "Hello World!"[0..<5]
+     print(subText)
+     Hello
+     */
+    subscript(value: CountableRange<Int>) -> Substring {
+        self[index(at: value.lowerBound)..<index(at: value.upperBound)]
+    }
+    
+    /*
+     let subText = "Hello World!"[..<1]
+     print(subText)
+     H
+     */
+    subscript(value: PartialRangeUpTo<Int>) -> Substring {
+        self[..<index(at: value.upperBound)]
+    }
+    
+    /*
+     let subText = "Hello World!"[...1]
+     print(subText)
+     He
+     */
+    subscript(value: PartialRangeThrough<Int>) -> Substring {
+        self[...index(at: value.upperBound)]
+    }
+    
+    /*
+     let subText = "Hello World!"[1...]
+     print(subText)
+     ello World!
+     */
+    subscript(value: PartialRangeFrom<Int>) -> Substring {
+        self[index(at: value.lowerBound)...]
+    }
+}
+
 extension Dictionary where Key == String, Value == String {
     public var query: String? {
         var urlComponent = URLComponents(string: "")
