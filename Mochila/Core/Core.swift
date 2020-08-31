@@ -58,3 +58,54 @@ public func += <K, V> (left: inout [K:V], right: [K:V]) {
         left[k] = v
     }
 }
+
+public func swizzle(type: AnyClass, original originalSelector: Selector, swizzled swizzledSelector: Selector) {
+    #if swift(>=4.0)
+    guard let originalMethod = class_getInstanceMethod(type, originalSelector),
+        let swizzledMethod = class_getInstanceMethod(type, swizzledSelector)
+        else { return }
+    #else
+    let originalMethod = class_getInstanceMethod(type, originalSelector)
+    let swizzledMethod = class_getInstanceMethod(type, swizzledSelector)
+    #endif
+
+    // Check whether original method has been swizzlled
+    if class_addMethod(
+        type, originalSelector,
+        method_getImplementation(swizzledMethod),
+        method_getTypeEncoding(swizzledMethod)
+        ) {
+        class_replaceMethod(
+            type, swizzledSelector, originalMethod,
+            method_getTypeEncoding(originalMethod)
+        )
+    } else {
+        method_exchangeImplementations(
+            originalMethod,
+            swizzledMethod
+        )
+    }
+}
+
+public func objc_getAssociatedObject<T>(_ object: Any, _ key: UnsafeRawPointer, defaultValue: T) -> T {
+    guard let value = objc_getAssociatedObject(object, key) as? T else {
+        return defaultValue
+    }
+    return value
+}
+
+public protocol SelfAware: class {
+    static func awake()
+}
+
+extension UIApplication {
+
+    private static let runOnce: Void = {
+        UIButton.awake()
+    }()
+
+    open override var next: UIResponder? {
+        UIApplication.runOnce
+        return super.next
+    }
+}

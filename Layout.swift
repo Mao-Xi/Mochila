@@ -123,3 +123,13 @@ extension UIDevice {
         return UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
     }
 }
+
+extension UIFont {
+    func sizeOfString(string: String, constrainedToWidth width: CGFloat, constrainedToHeight height: CGFloat = .greatestFiniteMagnitude) -> CGSize {
+        return NSString(string: string).boundingRect(
+            with: CGSize(width: width, height: height),
+            options: .usesLineFragmentOrigin,
+            attributes: [.font: self],
+            context: nil).size
+    }
+}

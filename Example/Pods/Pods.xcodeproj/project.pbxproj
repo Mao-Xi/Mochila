@@ -11,6 +11,7 @@
 		080A2F5D24DECC5E00257F03 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080A2F5C24DECC5E00257F03 /* Alert.swift */; };
 		080A2F5F24DED36900257F03 /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080A2F5E24DED36900257F03 /* Web.swift */; };
 		080A2F6124DEE00700257F03 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080A2F6024DEE00700257F03 /* Line.swift */; };
+		081258A924FD3B68006194DB /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081258A824FD3B68006194DB /* Button.swift */; };
 		0819D72E24DFCD3E00C06BE8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819D72D24DFCD3E00C06BE8 /* Date.swift */; };
 		08C8C1BD24F6A8D0004B7B99 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C8C1BC24F6A8D0004B7B99 /* Codable.swift */; };
 		08E9545424DE645B00760081 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9545324DE645B00760081 /* Layout.swift */; };
@@ -55,6 +56,7 @@
 		080A2F5C24DECC5E00257F03 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		080A2F5E24DED36900257F03 /* Web.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web.swift; sourceTree = "<group>"; };
 		080A2F6024DEE00700257F03 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		081258A824FD3B68006194DB /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		0819D72D24DFCD3E00C06BE8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		08C8C1BC24F6A8D0004B7B99 /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
 		08E9545324DE645B00760081 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				08E9546124DEB8AF00760081 /* Controller.swift */,
 				080A2F5C24DECC5E00257F03 /* Alert.swift */,
 				080A2F5E24DED36900257F03 /* Web.swift */,
+				081258A824FD3B68006194DB /* Button.swift */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				08E9545424DE645B00760081 /* Layout.swift in Sources */,
 				08E9545824DE7CE900760081 /* NibView.swift in Sources */,
 				08E9545A24DE9CAE00760081 /* Color.swift in Sources */,
+				081258A924FD3B68006194DB /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
