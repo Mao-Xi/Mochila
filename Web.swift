@@ -8,6 +8,7 @@
 import WebKit
 
 extension WKWebsiteDataStore {
+    
     public func cookie(_ domain: String? = nil, completion:@escaping ([HTTPCookie]) -> Void) {
         guard let domain = domain else {
             httpCookieStore.getAllCookies(completion)
@@ -18,6 +19,10 @@ extension WKWebsiteDataStore {
             let filteredCookies = cookies.filter { ($0.domain as NSString).range(of: domain).location != NSNotFound }
             completion(filteredCookies)
         }
+    }
+
+    public func deleteCookie(_ cookie: HTTPCookie, completion:(() -> Void)? = nil) {
+        httpCookieStore.delete(cookie, completionHandler: completion)
     }
 }
 
@@ -34,6 +39,21 @@ extension WKWebView {
         }
         group.notify(queue: DispatchQueue.main) {
             completion()
+        }
+    }
+
+    public func deleteAllCookies(completion:@escaping () -> Void) {
+        configuration.websiteDataStore.cookie { cookies in
+            let group = DispatchGroup()
+            for cookie in cookies {
+                group.enter()
+                self.configuration.websiteDataStore.deleteCookie(cookie) {
+                    group.leave()
+                }
+            }
+            group.notify(queue: DispatchQueue.main) {
+                completion()
+            }
         }
     }
 }
