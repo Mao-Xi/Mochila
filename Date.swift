@@ -7,6 +7,49 @@
 
 import Foundation
 
+extension Formatter {
+
+    /* Used for swift >= 4.0
+     For swift <= 3.0.2
+     static let iso8601: DateFormatter = {
+     let formatter = DateFormatter()
+     formatter.calendar = Calendar(identifier: .iso8601)
+     formatter.locale = Locale(identifier: "en_US_POSIX")
+     formatter.timeZone = TimeZone(secondsFromGMT: 0)
+     formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
+     return formatter
+     }()
+     */
+    public static let iso8601: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter
+    }()
+
+    public static var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = CONSTANT.enUSLocale
+        dateFormatter.calendar = CONSTANT.gregorianCalendar
+        return dateFormatter
+    }()
+}
+
+extension Date {
+
+    // 2020-08-31T15:36:20.022Z
+    var iso8601: String {
+        return Formatter.iso8601.string(from: self)
+    }
+}
+
+extension String {
+
+    // 2020-08-31T15:36:20.022Z
+    var dateFromISO8601: Date? {
+        return Formatter.iso8601.date(from: self)
+    }
+}
+
 extension Date {
     
     public func dateByAddingDays(days: Int) -> Date {
@@ -87,7 +130,7 @@ extension Date {
     }
 
     public func stringWithFormat(_ format: String) -> String {
-        let formatter = CONSTANT.dateFormatter
+        let formatter = Formatter.dateFormatter
         formatter.dateFormat = format
         return formatter.string(from: self)
     }
@@ -121,9 +164,18 @@ extension Date {
     }
 
     public func stringWithDateStyle(_ dateStyle: DateFormatter.Style = .none, _ timeStyle: DateFormatter.Style = .none) -> String {
-        let formatter = CONSTANT.dateFormatter
+        let formatter = Formatter.dateFormatter
         formatter.dateStyle = dateStyle
         formatter.timeStyle = timeStyle
         return formatter.string(from: self)
+    }
+}
+
+extension String {
+
+    public func dateWithFormat(_ format: String) -> Date? {
+        let formatter = Formatter.dateFormatter
+        formatter.dateFormat = format
+        return formatter.date(from: self)
     }
 }

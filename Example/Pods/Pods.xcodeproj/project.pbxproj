@@ -13,6 +13,7 @@
 		080A2F6124DEE00700257F03 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080A2F6024DEE00700257F03 /* Line.swift */; };
 		081258A924FD3B68006194DB /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081258A824FD3B68006194DB /* Button.swift */; };
 		0819D72E24DFCD3E00C06BE8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819D72D24DFCD3E00C06BE8 /* Date.swift */; };
+		08B7C93924FD525000B73E94 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B7C93824FD525000B73E94 /* Number.swift */; };
 		08C8C1BD24F6A8D0004B7B99 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C8C1BC24F6A8D0004B7B99 /* Codable.swift */; };
 		08E9545424DE645B00760081 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9545324DE645B00760081 /* Layout.swift */; };
 		08E9545624DE671B00760081 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9545524DE671B00760081 /* Schedule.swift */; };
@@ -58,6 +59,7 @@
 		080A2F6024DEE00700257F03 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		081258A824FD3B68006194DB /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		0819D72D24DFCD3E00C06BE8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		08B7C93824FD525000B73E94 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		08C8C1BC24F6A8D0004B7B99 /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
 		08E9545324DE645B00760081 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		08E9545524DE671B00760081 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				08E9546324DEBA1C00760081 /* Foundation.swift */,
 				0819D72D24DFCD3E00C06BE8 /* Date.swift */,
 				08C8C1BC24F6A8D0004B7B99 /* Codable.swift */,
+				08B7C93824FD525000B73E94 /* Number.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 			files = (
 				08E9545E24DE9FBB00760081 /* View.swift in Sources */,
 				0819D72E24DFCD3E00C06BE8 /* Date.swift in Sources */,
+				08B7C93924FD525000B73E94 /* Number.swift in Sources */,
 				08C8C1BD24F6A8D0004B7B99 /* Codable.swift in Sources */,
 				08E9545C24DE9D2A00760081 /* Image.swift in Sources */,
 				080A2F5F24DED36900257F03 /* Web.swift in Sources */,

@@ -7,16 +7,6 @@
 
 import Foundation
 
-extension Double {
-    public func fractionDigits(count: Int) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.minimumFractionDigits = count
-        formatter.maximumFractionDigits = count
-        return formatter.string(for: self) ?? "\(self)"
-    }
-}
-
 extension String {
     public func trimWord(wordLimit: Int) -> String {
         let scanner = Scanner(string: self)

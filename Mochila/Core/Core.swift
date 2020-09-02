@@ -19,19 +19,6 @@ public struct CONSTANT {
     public static let isPad = UIDevice.current.userInterfaceIdiom == .pad
     public static let gregorianCalendar = Calendar(identifier: .gregorian)
     public static let enUSLocale = Locale(identifier: "en_US")
-    public static var numberFormatter: NumberFormatter {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.locale = enUSLocale
-        numberFormatter.numberStyle = .currency
-        numberFormatter.usesGroupingSeparator = true
-        return numberFormatter
-    }
-    public static var dateFormatter: DateFormatter {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = enUSLocale
-        dateFormatter.calendar = gregorianCalendar
-        return dateFormatter
-    }
     public static let standardUserDefault = UserDefaults.standard
 }
 
