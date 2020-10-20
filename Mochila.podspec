@@ -27,16 +27,6 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '11.0'
   s.swift_versions = ['4.0', '4.1', '4.2', '5.0', '5.1', '5.2']
-
-  s.default_subspecs = %w[Core]
-
-  s.subspec "Core" do |s|
-    s.source_files = "Mochila/Core/*.swift"
-  end
-
-  s.subspec "Layout" do |s|
-    s.dependency "Mochila/Core"
-    s.source_files = "Mochila/Layout/*.swift"
-  end
+  s.source_files = "Mochila/**/*.swift"
 
 end

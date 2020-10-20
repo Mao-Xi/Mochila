@@ -1,8 +1,8 @@
 {
   "name": "Mochila",
-  "version": "0.1.0",
+  "version": "1.0",
   "summary": "Tools To Speed Up Your App Development",
-  "description": "Currently includes\n*\n*\n*",
+  "description": "Currently includes\n* Layout\n* NibView\n* Color & Image\n* Regex\n* Codable\n* Date & Number",
   "homepage": "https://github.com/Mao-Xi/Mochila",
   "license": {
     "type": "MIT",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Mao-Xi/Mochila.git",
-    "tag": "0.1.0"
+    "tag": "1.0"
   },
   "platforms": {
     "ios": "11.0"
@@ -26,23 +26,6 @@
     "5.1",
     "5.2"
   ],
-  "default_subspecs": [
-    "Core"
-  ],
-  "subspecs": [
-    {
-      "name": "Core",
-      "source_files": "Mochila/Core/*.swift"
-    },
-    {
-      "name": "Layout",
-      "dependencies": {
-        "Mochila/Core": [
-
-        ]
-      },
-      "source_files": "Mochila/Layout/*.swift"
-    }
-  ],
+  "source_files": "Mochila/{Core/*,Layout/*}.swift",
   "swift_version": "5.2"
 }
