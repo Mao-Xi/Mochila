@@ -8,17 +8,19 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Mochila'
-  s.version          = '0.1.0'
+  s.version          = '1.0'
   s.summary          = 'Tools To Speed Up Your App Development'
   s.description      = <<-DESC
                         Currently includes
-                        *
-                        *
-                        *
+                        * Layout
+                        * NibView
+                        * Color & Image
+                        * Regex
+                        * Codable
+                        * Date & Number
                        DESC
 
   s.homepage         = 'https://github.com/Mao-Xi/Mochila'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Victor Zhu' => 'ghoyelo@gmail.com' }
   s.source           = { :git => 'https://github.com/Mao-Xi/Mochila.git', :tag => s.version.to_s }
