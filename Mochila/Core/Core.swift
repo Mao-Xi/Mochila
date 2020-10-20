@@ -88,7 +88,7 @@ public protocol SelfAware: class {
 extension UIApplication {
 
     private static let runOnce: Void = {
-//        UIButton.awake()
+        UIButton.awake()
     }()
 
     open override var next: UIResponder? {

@@ -1,5 +1,5 @@
 PODS:
-  - Mochila (1.0)
+  - Mochila (1.2)
 
 DEPENDENCIES:
   - Mochila (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Mochila: 9dab9ad8b012b32218a5cc894f9d1e64f2f714d2
+  Mochila: 52845083e114285de1058f96aa6fa53f11f4f811
 
 PODFILE CHECKSUM: 1f9d04835ec659b885591209fd985a8dd645d3e0
 

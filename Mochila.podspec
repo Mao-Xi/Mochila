@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Mochila'
-  s.version          = '1.1'
+  s.version          = '1.2'
   s.summary          = 'Tools To Speed Up Your App Development'
   s.description      = <<-DESC
                         Currently includes
