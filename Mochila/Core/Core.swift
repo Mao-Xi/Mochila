@@ -29,6 +29,12 @@ extension Sequence where Iterator.Element: Hashable {
     }
 }
 
+extension Collection {
+    subscript (safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}
+
 public func + <K, V> (left: [K:V], right: [K:V]) -> [K:V] {
     var result: [K:V] = [:]
     for (k, v) in left {
